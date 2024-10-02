@@ -1,0 +1,7 @@
+SELECT * FROM ryby;
+
+Select Ryby_id, wymiar _ochronny FROM okres_ochronny WHERE wymiar_ochronny < 30;
+
+SELECT nazwa, akwen, wojewodztwo FROM ryby LEFT JOIN lowisko On ryby.id = lowisko.Ryby_id WHERE lowisko.rodzaj = 3;
+
+ALTER TABLE ryby add dobowy_limit varchar(255);
