@@ -1,0 +1,67 @@
+/* RESET + wspólne ustawienia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+/* Kolor tła dla całej strony */
+body {
+    background-color: #F6E5DC;
+    /* Usuwamy wymuszanie width: 100vw i height: 100vh,
+       bo to często wywołuje problemy z paskiem przewijania */
+}
+
+/* Baner (nagłówek) */
+header {
+    background-color: #2F180C;
+    text-align: center;
+    color: khaki;
+    height: 60px;
+    line-height: 60px; /* Dzięki temu tekst jest wyśrodkowany pionowo */
+}
+
+/* Panel lewy */
+.left {
+    float: left;      /* Dzięki float lewy i prawy panel mogą stać obok siebie */
+    width: 60%;       /* Zgodnie z treścią zadania */
+}
+
+/* Panel prawy */
+.right {
+    float: left;      /* Również unosimy, aby był obok lewego panelu */
+    width: 40%;       /* Wypełni pozostałą część ekranu (lub możesz ustawić precyzyjnie) */
+    font-size: 150%;
+    padding: 70px;
+}
+
+/* Panel dolny */
+.bottom {
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+    clear: both; /* aby panel dolny zaczynał się poniżej lewego/prawego (float) */
+}
+
+/* Stopka */
+footer {
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+    text-align: center;
+    line-height: 60px; /* Wyśrodkowanie pionowe tekstu */
+}
+
+/* Obrazek w panelu lewym */
+img {
+    height: 350px; /* Wymagana wysokość obrazka */
+}
+
+/* Przyciski formularza */
+button {
+    margin: 10px;
+    padding: 5px;
+    background-color: #2F180C;
+    color: khaki;
+}
