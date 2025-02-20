@@ -1,5 +1,8 @@
 * {
     font-family: Cambria;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header, footer {
@@ -7,6 +10,11 @@ header, footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+.pudlo {
+    display: flex;
+    flex-direction: row;
 }
 
 .lewy, .prawy {
@@ -25,5 +33,23 @@ header, footer {
 }
 
 table {
-    
+    border: 1px solid DimGray;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+td, th {
+    border: 1px solid DimGray;
+    padding: 5px;
+}
+
+td:hover {
+    background-color: SteelBlue;
+    color: white;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
 }
