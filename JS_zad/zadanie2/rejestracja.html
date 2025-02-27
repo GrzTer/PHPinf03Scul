@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <aside>
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </aside>
+    <header>
+        <h1>Zarejestruj się w sklepie</h1>
+    </header>
+    <main>
+        <section>
+            <button onclick="PokazBlok('blok1')">Klient</button>
+            <button onclick="PokazBlok('blok2')">Adres</button>
+            <button onclick="PokazBlok('blok3')">Kontakt</button>
+        </section>
+        <section id="blok1">
+            <p>Imię</p>
+            <input id="imie" type="text" placeholder="Wpisz dane..." onfocusout="ZmienPasek()">
+            <p>Nazwisko</p>
+            <input id="nazwisko" type="text" onfocusout="ZmienPasek()">
+            <p>Data urodzenia</p>
+            <input id="dataUrodzenia" type="date" onfocusout="ZmienPasek()">
+        </section>
+        <section id="blok2">
+            <p>Ulica</p>
+            <input id="ulica" type="text" onfocusout="ZmienPasek()">
+            <p>Numer</p>
+            <input id="numer" type="number" onfocusout="ZmienPasek()">
+            <p>Miasto</p>
+            <input id="miasto" type="text" onfocusout="ZmienPasek()">
+        </section>
+        <section id="blok3">
+            <p>Numer komórkowy</p>
+            <input id="numerTelefonu" type="tel" onfocusout="ZmienPasek()">
+            <br>
+            <label>
+                <input type="checkbox" id="rodo" onfocusout="ZmienPasek()">
+                Akceptuję RODO
+            </label>
+            <br>
+            <button id="zatwierdz" onclick="Zatwierdz()">Zatwierdź dane</button>
+        </section>
+    </main>
+    <section id="pasek_postepu">
+        <section id="pasek"></section>
+    </section>
+    <footer>
+        <h4>Rejestrację do sklepu wykonał: Chriskyy</h4>
+    </footer>
+</body>
+<script src="main.js"></script>
+</html>
