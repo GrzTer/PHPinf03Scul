@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+</head>
+<body>
+<form action="skrypt.php" method="POST">
+    <label>Imię:</label><br>
+    <input type="text" name="imie" required><br><br>
+
+    <label>Nazwisko:</label><br>
+    <input type="text" name="nazwisko" required><br><br>
+
+    <label>Wiek:</label><br>
+    <input type="number" name="wiek" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Wiadomość:</label><br>
+    <textarea name="wiadomosc" required></textarea><br><br>
+
+    <label>Ulubiony język programowania:</label><br>
+    <select name="jezyk" required>
+        <option value="">--wybierz--</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Java">Java</option>
+        <option value="C#">C#</option>
+    </select><br><br>
+
+    <label>Płeć:</label><br>
+    <input type="radio" name="plec" value="Mężczyzna" required>Mężczyzna<br>
+    <input type="radio" name="plec" value="Kobieta">Kobieta<br><br>
+
+    <label>
+        <input type="checkbox" name="zgoda" required> Zgoda na przetwarzanie danych
+    </label><br><br>
+
+    <input type="submit" value="Wyślij">
+</form>
+</body>
+</html>
