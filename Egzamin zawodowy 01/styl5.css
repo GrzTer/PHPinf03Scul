@@ -1,0 +1,43 @@
+* {
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rosybrown;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    
+    .lewy, .prawy {
+        width: 30%;
+        height: 20px;
+    }
+
+    .srodkowy {
+        width: 40%;
+        height: 200px;
+        text-align: center;
+    }
+}
+
+main {
+    background-color: wheat;
+    padding: 50px;
+}
+
+footer {
+    background-color: rosybrown;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+a {
+    border: solid 2px darkred;
+    background-color: salmon;
+    color: darkred;
+    padding: 20px;
+    line-height: 200px;
+}

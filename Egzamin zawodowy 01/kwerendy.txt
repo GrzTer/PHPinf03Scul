@@ -1,0 +1,3 @@
+Zapytanie 3 - SELECT imie, nazwisko FROM `karty_wedkarskie` as k, zawody_wedkarskie as z WHERE z.Karty_wedkarskie_id = k.id AND z.id = 3;
+
+Zapytanie 4 - UPDATE `karty_wedkarskie` SET `punkty`= 10 WHERE id =2;
