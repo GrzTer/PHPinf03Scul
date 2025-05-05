@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zawody wędkarskie</title>
+    <link rel="stylesheet" href="styl3.css" />
+  </head>
+
+  <body>
+    <header>
+      <section id="lewy">
+        <h1>Zawody polskich wędkarzy</h1>
+      </section>
+      <section id="prawy"><img src="zawody.jpg" alt="wędkowanie" /></section>
+    </header>
+    <main>
+      <h3>Łowiska</h3>
+      <ul>
+        <li>Zalew Węgrowski</li>
+        <li>Zbiornik Bukówka</li>
+        <li>Jeziorko Bartbetowskie</li>
+        <li>Warta-Obrzycko</li>
+      </ul><br>
+      <h3>Dodaj zawody wędkarskie</h3><br>
+      <form action="zgloszenie.php" method="post">
+        <label>Łowisko:</label><input type="number" name="NrLowiska" id="NrLowiska" /><br>
+        <label>Data:</label><input type="date" name="DataZawodow" id="DataZawodow" /><br>
+        <label>Sędzia:</label><input type="text" name="SedziaZawodow" id="SedziaZawodow" /><br>
+        <button type="reset">CZYŚĆ</button>
+        <button type="submit">DODAJ</button>
+      </form>
+    </main>
+    <footer>
+      <section id="stopka-lewa"><a href="kwerendy.txt">Pobierz</a></section>
+      <section id="stopka-prawa"><p>Stronę przygotował: Grzegorz Tereszkiewicz</p></section>
+    </footer>
+  </body>
+</html>

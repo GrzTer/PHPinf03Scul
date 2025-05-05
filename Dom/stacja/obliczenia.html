@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Całodobowa stacja paliw</h1>
+    </header>
+    <menu>
+        <a href="stacja.html">
+            <img src="home.png" alt="Strona Główna" width="80">
+        </a>
+        <a href="obliczenia.html">
+            <img src="znak.png" alt="Oblicz" width="80">
+        </a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+    </menu>
+    <main>
+        <section id="lewy">
+            <h2>Orientacyjny koszt paliwa</h2>
+            <label for="Rodzaj">Rodzaj paliwa (1-benzyna, 2-olej napędowy):</label><br>
+            <input type="number" name="Rodzaj" id="Rodzaj" required><br>
+            <label for="Ilosc">Ile litrów?</label><br>
+            <input type="number" name="Ilosc" id="Ilosc" required><br>
+            <button type="submit" onclick="calculateFuelCost()">OBLICZ</button><br>
+            <p id="Wynik">Koszt paliwa: </p>
+        </section>
+        <section id="prawy">
+            <img id="samochod" src="samochod.png" alt="samochód" width="auto">
+        </section>
+    </main>
+    </main>
+    <footer>
+        <p>Stronę opracował: 00000000000</p>
+    </footer>
+    <script>
+        function calculateFuelCost() {
+            var rodzaj = document.getElementById('Rodzaj').value;
+            var ilosc = document.getElementById('Ilosc').value;
+            var cena;
+
+            if (rodzaj == 1) {
+                cena = 4;
+            }
+            else if (rodzaj == 2) {
+                cena = 3.5;
+            } else {
+                cena = 0;
+            }
+
+            if (ilosc && cena) {
+                var koszt = cena * ilosc;
+                document.getElementById('Wynik').textContent = "Koszt paliwa: " + koszt.toFixed(2) + "zł";
+            } else {
+                document.getElementById('Wynik').textContent = "Proszę wprowadzić poprawne dane";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+* {
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: seagreen;
+    color: white;
+    line-height: 150px;
+    height: 260px;
+    font-size: 160%;
+    
+    #lewy {
+        width: 75%;
+    }
+    #prawy {
+        width: 25%;
+        text-align: right;
+        margin-right: 60px;
+    }
+}
+
+main {
+    background-color: mintcream;
+    padding: 80px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    
+    #stopka-lewa, #stopka-prawa {
+    background-color: SeaGreen;
+    color: white;
+    width: 50%;
+    height: 70px;
+    text-align: center;
+}
+    #stopka-prawa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+input, button {
+    margin-bottom: 20px;
+}
+
+img {
+    box-shadow: 15px 15px 10px dimgray;
+}
+
+a {
+    text-decoration: none;
+    background-color: mintcream;
+    color: seagreen;
+    padding: 15px;
+    line-height: 70px;
+}
+
+ul {
+    padding-left: 40px;
+    margin-top: 20px;
+}
