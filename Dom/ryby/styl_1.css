@@ -3,13 +3,17 @@
     padding: 0px;
     font-family: Helvetica;
 }
-
 header, footer {
     background-color: #00838F;
     color: white;
     padding: 5px;
     font-size: 130%;
     text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -20,6 +24,9 @@ header, footer {
 
 #lewy1 {
     height: 150px;
+    li {
+        margin-left: 40px;
+    }
 }
 
 #lewy2 {

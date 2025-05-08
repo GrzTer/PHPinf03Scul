@@ -1,0 +1,8 @@
+kwerenda 1:
+SELECT imie, nazwisko, miasto FROM klient WHERE miasto = 'Legionowo' OR miasto = 'Warszawa';
+kwerenda 2:
+SELECT nazwa FROM produkty WHERE cena_brutto > 500;
+kwerenda 3:
+SELECT k.nazwa_kategorii, AVG(p.cena_brutto) AS srednia_cena FROM kategorie AS k JOIN produkty AS p ON k.id_kat = p.id_kat GROUP BY k.nazwa_kategorii;
+kwerenda 4:
+SELECT z.id_zam, z.ilosc, z.wartosc, p.nazwa FROM zamowienia AS z JOIN produkty AS p ON z.id_prod = p.id_prod WHERE z.id_klient = 2;
