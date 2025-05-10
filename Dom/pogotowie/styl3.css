@@ -1,0 +1,58 @@
+* {
+    font-family: Arial;
+    margin: 0px;
+    padding: 0px;
+}
+
+header, footer {
+    background-color: saddlebrown;
+    color: white;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+header img {
+    float: right;
+}
+
+header h2, header p {
+    padding-top: 20px;
+}
+
+#lewy_baner, #lewy_stopka {
+    width: 55%;
+    font-size: 120%;
+}
+
+#srodkowy_baner, #srodkowy_stopka {
+    width: 25%;
+}
+
+
+#prawy_baner, #prawy_stopka {
+    width: 20%;
+    text-align: center;
+}
+
+#prawy_stopka {
+    text-align: right;
+}
+
+main {
+    background-color: snow;
+    padding: 70px;
+}
+
+a {
+    border: dotted 2px saddlebrown;
+    background-color: snow;
+    color: saddlebrown;
+    padding: 20px;
+    line-height: 100px;
+}
+
+ol {
+    list-style-type: lower-alpha;
+    padding-left: 40px;
+}

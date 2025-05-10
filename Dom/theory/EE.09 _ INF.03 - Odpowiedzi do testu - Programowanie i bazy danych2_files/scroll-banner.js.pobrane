@@ -1,0 +1,43 @@
+window.onload = (event) => {
+	
+var rekl_start = document.querySelector("#sidead");	
+var viewportOffset = rekl_start.getBoundingClientRect();
+var rekl_startTop1 = viewportOffset.top;
+var lastKnownScrollPosition = window.scrollY;
+var rekl_startTop = 0;
+if (rekl_startTop1<0) rekl_startTop = lastKnownScrollPosition - Math.abs(rekl_startTop1);
+else rekl_startTop = lastKnownScrollPosition + rekl_startTop1;
+var rekl_height = viewportOffset.height;
+if (rekl_height < 10) rekl_height = 620;
+var koniec = document.querySelector("#siteend");	
+var viewportOffsetkoniec = koniec.getBoundingClientRect();
+var koniecTop1 = viewportOffsetkoniec.top;
+var koniecTop = 1000;
+if (koniecTop1<0) koniecTop = lastKnownScrollPosition - Math.abs(koniecTop1);
+else koniecTop = lastKnownScrollPosition + koniecTop1;
+var topPadding = 50;
+var sideb = document.querySelector("#side");
+var sideOffset = sideb.getBoundingClientRect();
+var poczatekside1 = sideOffset.top;
+if (poczatekside1<0) poczatekside = lastKnownScrollPosition - Math.abs(poczatekside1);
+else poczatekside = lastKnownScrollPosition + poczatekside1;
+		
+document.addEventListener("scroll", (event) => {
+
+	viewportOffsetkoniec = koniec.getBoundingClientRect();
+	koniecTop1 = viewportOffsetkoniec.top;
+	koniecTop = lastKnownScrollPosition + koniecTop1;
+	
+	lastKnownScrollPosition = window.scrollY;
+	var rekl = document.querySelector("#sidead");	
+	
+	if (lastKnownScrollPosition < rekl_startTop - topPadding) {
+		rekl.style.top = "0px";
+	} 
+	else if (lastKnownScrollPosition > rekl_startTop - topPadding && lastKnownScrollPosition < koniecTop - rekl_height - 400) {
+		newpos = lastKnownScrollPosition - rekl_startTop + topPadding;
+		rekl.style.top = Math.floor(newpos) + "px";
+	}
+
+});
+};

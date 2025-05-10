@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css" />
+  </head>
+  <body>
+    <section id="lewy">
+      <h1>Konfigurator stylu</h1>
+      <br />
+      <p>Podaj kolor tła</p>
+      <br />
+      <button>Indigo</button>
+      <button>SteelBlue</button>
+      <button>Olive</button><br />
+      <p>Podaj kolor czcionki</p>
+      <br />
+      <select id="fontColor">
+        <option value="white">White</option>
+        <option value="tan">Tan</option>
+        <option value="bisque">Bisque</option>
+        <option value="plum">Plum</option>
+      </select>
+      <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+      <br />
+      <input type="text" name="fontSize" id="fontSize" value="100%" />
+      <p>Czy rysunek ma miec ramkę?</p>
+      <br />
+      <input type="checkbox" id="fontBorder" checked /> Rysuj ramkę
+
+    <p>Jaki jest typ punktora listy?</p>
+    <input type="radio" name="bullet" id="typeDisk"> dysk <br>
+    <input type="radio" name="bullet" id="typeSquare"> kwadrat <br>
+    <input type="radio" name="bullet" id="typeCircle"> okrąg <br>
+  </section>
+    <section id="prawy">
+      <img src="gibraltar.jpg" alt="półwysep Gibraltar" />
+      <ul>
+        <li>element1</li>
+        <li>element2</li>
+        <li>element3</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </section>
+    <footer>Autor: 000000000</footer>
+    <script>
+      const prawy = document.getElementById("prawy");
+      const buttons = document.querySelectorAll("#lewy button");
+      const fontColor = document.getElementById("fontColor");
+      const fontSize = document.getElementById("fontSize");
+      const fontBorder = document.getElementById("fontBorder");
+      const img = document.querySelector("#prawy img");
+      const radios = document.querySelectorAll('#lewy input[type="radio"]');
+      const list = document.querySelector("#prawy ul");
+
+      buttons.forEach((b) =>
+        b.addEventListener(
+          "click",
+          () => (prawy.style.backgroundColor = b.textContent.trim())
+        )
+      );
+
+      fontColor.addEventListener(
+        "change",
+        () => (prawy.style.color = fontColor.value)
+      );
+
+      fontSize.addEventListener(
+        "blur",
+        () => (prawy.style.fontSize = fontSize.value)
+      );
+
+      fontBorder.addEventListener(
+        "change",
+        () =>
+          (img.style.border = fontBorder.checked ? "2px solid black" : "none")
+      );
+
+      radios.forEach((r) =>
+        r.addEventListener("change", () => {
+          let t = "disc";
+          if (r.id === "typeSquare") t = "square";
+          else if (r.id === "typeCircle") t = "circle";
+          list.style.listStyleType = t;
+        })
+      );
+    </script>
+  </body>
+</html>

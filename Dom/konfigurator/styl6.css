@@ -1,0 +1,44 @@
+* {
+    font-family: Georgia;
+}
+
+#lewy {
+  background-color: Maroon;
+  color: White;
+  height: 600px;
+  width: 30%;
+  float: left;
+}
+
+#prawy {
+  background-color: Maroon;
+  color: White;
+  height: 600px;
+  width: 70%;
+  float: left;
+  overflow: auto;
+}
+
+footer {
+    background-color: dimgray;
+    color: white;
+}
+
+#prawy img, #prawy ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#prawy p {
+  padding: 10px;
+  clear: both;
+}
+
+img {
+    padding: 10px;
+    border: solid 1px white;
+}
+
+#lewy button:nth-of-type(1) { background-color: Indigo; }
+#lewy button:nth-of-type(2) { background-color: SteelBlue; }
+#lewy button:nth-of-type(3) { background-color: Olive; }

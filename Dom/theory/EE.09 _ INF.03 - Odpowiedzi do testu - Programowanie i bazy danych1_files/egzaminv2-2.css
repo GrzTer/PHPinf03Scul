@@ -1,0 +1,236 @@
+#zegar1
+{
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+	font-size: 20px;
+    color: #D2D3D6;
+	letter-spacing: 0.025em;
+	word-wrap: break-word;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+    line-height: 150%;
+	min-height: 30px;
+}
+
+.wynikbottom
+{
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+	font-size: 20px;
+    color: #D2D3D6;
+	letter-spacing: 0.025em;
+	word-wrap: break-word;
+	text-align:center;
+    line-height: 150%;
+	border-bottom: 1px solid #FA6C65;
+    border-top: 1px solid #FA6C65;
+    padding: 15px;
+	min-height: 30px;
+}
+
+.trescE
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+	background-color: #26282E;
+	text-align: left;
+	margin-bottom: 12px;
+}
+
+.odpowiedzE
+{
+	border: 2px solid #26282E;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 15px;
+    line-height: 130%;
+	background-color: #26282E;
+	text-align: left;
+	margin-bottom: 12px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	
+}
+
+.odpowiedzE:hover
+{ 
+	border: 2px solid #4B91D1;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}	
+
+.odpowiedzEzazn
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 15px;
+    line-height: 130%;
+	text-align: left;
+	margin-bottom: 12px;
+	cursor: pointer;
+	background-color: #4B91D1;
+	border: 2px solid #4B91D1;
+	color: #fff;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.odpowiedzEzazn:hover
+{ 
+	background-color: #4B91D1;
+	color: #fff;
+	border: 2px solid #4B91D1;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}	
+
+.obrazek
+{ 
+    padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin-top: 12px;
+	margin-bottom: 15px;
+	background: #fff;
+}
+
+.obrazek .img-responsive
+{
+	display: inline-block;
+}
+
+input[type="checkbox"]
+{
+	margin-right: 5px !important;
+}
+
+.odpgood
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 15px;
+    line-height: 130%;
+	background-color: #015501;
+	text-align: left;
+	margin-bottom: 12px;
+	color: #eee;
+	opacity: 1;
+}
+
+.odpbad
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 15px;
+    line-height: 130%;
+	background-color: #451717;
+	text-align: left;
+	margin-bottom: 12px;
+	color: #FFD9D9;
+	opacity: 0.2;
+}
+
+.odpwrong
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 15px;
+    line-height: 130%;
+	background-color: #820000;
+	text-align: left;
+	margin-bottom: 12px;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.rezultat
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+	background-color: #26282E;
+	text-align: left;
+	margin-bottom: 12px;
+	color: #8E9198;
+}
+
+.rezultatN
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+	margin-bottom: 12px;
+	background-color: #820000;
+	text-align: left;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.rezultatY
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+	margin-bottom: 12px;
+	background-color: #015501;
+	text-align: left;
+	color: #fff;
+	opacity: 1;
+}
+
+.rezultatB
+{ 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+	font-size: 18px;
+    padding: 20px;
+    line-height: 150%;
+	margin-bottom: 12px;
+	background-color: #4B91D1;
+	text-align: left;
+	color: #fff;
+	opacity: 1;
+}
+
+.sep
+{
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+	color: #555;	
+}

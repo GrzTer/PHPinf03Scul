@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zespoły ratownicze</title>
+    <link rel="stylesheet" href="styl3.css" />
+  </head>
+  <body>
+    <header>
+      <section id="lewy_baner"><h2>Dodanie zespołu ratowniczego</h2></section>
+      <section id="srodkowy_baner"><p>Kontakt:<br />022 222 11 333</p></section>
+      <section id="prawy_baner"><img src="obraz.jpg" alt="Ratownicy" /></section>
+    </header>
+    <main>
+      <h3>Dodaj nowy zespół</h3><br />
+      <form action="dodanie.php" method="post">
+        <label>Numer karetki:</label><br />
+        <input type="number" name="nrKaretki" id="nrKaretki" /><br />
+        <label>Imię i Nazwisko pierwszego ratownika:</label><br />
+        <input type="text" name="ratownik1" id="ratownik1" /><br />
+        <label>Imię i Nazwisko drugiego ratownika:</label><br />
+        <input type="text" name="ratownik2" id="ratownik2" /><br />
+        <label>Imię i Nazwisko trzeciego ratownika:</label><br />
+        <input type="text" name="ratownik3" id="ratownik3" /><br />
+        <button type="reset">CZYŚĆ</button>
+        <button type="submit">DODAJ</button>
+      </form>
+    </main>
+    <footer>
+      <section id="lewy_stopka">
+        <a href="kwerdendy.txt" download>Zobacz kwerendy</a>
+      </section>
+      <section id="srodkowy_stopka">
+        <br /><h5>Przypominamy numery alarmowe</h5><br />
+        <ol>
+          <li>112</li>
+          <li>999</li>
+        </ol>
+      </section>
+      <section id="prawy_stopka"><br />Autor:<br />00000000000</section>
+    </footer>
+  </body>
+</html>

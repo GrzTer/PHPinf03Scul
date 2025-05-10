@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica;   
+}
+
+header, footer {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+
+main {
+    background-color: rgb(176, 196, 222);
+    padding: 50px;
+    text-align: center;
+}
+
+#main-img {
+    padding: 3px;
+    border: dashed blue 1px;
+    border-radius: 10px;
+}
+
+div {
+    display: flex;
+}
+
+#lewy {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 80%;
+}
+
+#lewy > img {
+    height: 40%;
+}
+
+#lewy > img:hover {
+    border: solid white 1px;
+}
+
+#prawy {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 20%;
+}

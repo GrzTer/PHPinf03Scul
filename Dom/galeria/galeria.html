@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <header>
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+    <main>
+        <img id="main-img" src="lanzarotte.jpg" alt="galeria">
+    </main>
+    <div>
+        <section id="lewy">
+            <br><h3>Przeglądaj zdjęcia</h3><br>
+            <img src="lanzarotte.jpg" alt="lanzarotte">
+            <img src="pekin.jpg" alt="pekin">
+            <img src="serengeti.jpg" alt="serengeti">
+            <img src="wenecja.jpg" alt="wenecja">
+            <img src="tajlandia.jpg" alt="tajlandia">
+        </section>
+        <section id="prawy">
+            <br><h3>Obrazy w naszej galerii</h3><br>
+            <table>
+                <tr>
+                    <td>Europa</td>
+                    <td>Azja</td>
+                    <td>Afryka</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+            </table><br>
+            <p>Polub nas <img id="like-icon" src="icon-off.png" onclick="iconClick()" alt="lubię to"></p><br>
+            <a target="_blank" href="http://pixabay.com">Odkryj więcej zdjęć</a>
+        </section>
+    </div>
+    <footer>Autor: 00000000000</footer>
+    <script>
+        var main_image = document.getElementById('main-img');
+        var photos = document.querySelectorAll('#lewy img');
+        
+        photos.forEach(i => {
+            i.onclick = function(){
+                main_image.src = this.src;
+                main_image.alt = this.alt;
+            }
+        });
+
+        function iconClick() {
+            var icon_src = document.getElementById('like-icon');
+            if (icon_src.src.endsWith('icon-off.png')) {
+                icon_src.src = 'icon-on.png'
+            } else {
+                icon_src.src = 'icon-off.png'
+            }
+        }
+    </script>
+</body>
+</html>

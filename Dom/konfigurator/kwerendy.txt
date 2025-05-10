@@ -1,0 +1,8 @@
+kw1
+CREATE USER 'Agnieszka' IDENTIFIED BY 'haslo4';
+kw2
+SELECT AVG(rocznik) AS srednia_rocznik FROM samochody WHERE marka = 'opel';
+kw3
+SELECT s.marka, k.imie FROM samochody AS s INNER JOIN wypozyczenia AS w ON s.id = w.samochody_id INNER JOIN klienci AS k ON k.id = w.klienci_id;
+kw4
+ALTER TABLE klasa DROP COLUMN cena;
