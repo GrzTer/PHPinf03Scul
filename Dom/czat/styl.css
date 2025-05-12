@@ -1,0 +1,78 @@
+* {
+    font-family: Garamond;
+    margin: 0;
+}
+
+header {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    width: 80%;
+    height: 80px;
+    float: left;
+}
+
+main {
+    width: 80%;
+    height: 600px;
+    float: left;
+}
+
+
+main button {
+    background-color: tomato;
+    border: solid 1px darkred;
+    padding: 5px;
+    font-weight: bold;
+}
+
+main input {
+    width: 500px;
+}
+
+aside {
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+    float: right;
+}
+
+
+footer {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    clear: both;
+}
+
+img {
+    border-radius: 50%;
+    padding: 0px 10px 0px 10px;
+}
+
+section {
+    border: solid 1px tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: scroll;
+}
+
+article {
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+    display: flex;
+}
+
+.Jolanta {
+    background-color: #EEE;
+    justify-content: flex-start;
+}
+
+.Krzysiek {
+    background-color: #CCC;
+    justify-content: flex-end;
+}

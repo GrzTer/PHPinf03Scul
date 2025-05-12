@@ -1,0 +1,33 @@
+function toggleBanner() {
+
+	let h_path = 'https://egzamin-informatyk.pl/code-as-you-are-h.png';
+	let v_path = 'https://egzamin-informatyk.pl/code-as-you-are-v.png';
+	
+	let alt_text = '42 Warsaw Coding Academy';
+	let b_link = 'https://42warsaw.pl/en/?utm_source=exam&utm_medium=banner&utm_campaign=apply';
+
+     if ($(window).innerWidth() <= 700) {
+        replaceImagePaths(v_path, alt_text, b_link);
+    }
+	else {
+		replaceImagePaths(h_path, alt_text, b_link);
+	}
+	
+}
+
+
+function replaceImagePaths(path, alt_text, b_link) {
+    
+	let content = '<a href="' + b_link + '" target="_blank"><img src="' + path + '" alt="' + alt_text + '" title="' + alt_text + '" class="img-responsive" style="margin: 0 auto;"></a>';
+	
+	document.querySelector('#topbaner').innerHTML = content;
+
+    }
+
+$(window).resize(function() {
+    toggleBanner();
+});
+
+$(function(){
+    toggleBanner();
+});
