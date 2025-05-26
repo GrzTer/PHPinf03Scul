@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header><h2>Efekty na obrazach</h2></header>
+    <main>
+        <section id="s1">
+            <img src="pszczola.jpg" alt="pszczola na fioletowym kwiatku">
+            <fieldset>
+                <input type="radio" id="blur" name="efekt" value="Blur">
+                <label for="blur">Blur</label><br>
+                <input type="radio" id="sepia" name="efekt" value="Sepia">
+                <label for="sepia">Sepia</label><br>
+                <input type="radio" id="negatyw" name="efekt" value="Negatyw">
+                <label for="negatyw">Negatyw</label><br>
+            </fieldset>
+            <button onclick="changePicOne()">Zastosuj</button>
+        </section>
+        <section id="s2">
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy">
+            <div>
+                <button onclick="changePicTwo()">Kolorowy</button>
+                <button onclick="changePicTwo()">Czarno-biały</button>
+            </div>
+        </section>
+        <section id="s3">
+            <img src="owoce.jpg" alt="Kosz pełen owoców">
+            <input type="range" min="0" max="100" value="100"><br>
+            <button onclick="changePicThree()">Zastosuj</button>
+        </section>
+        <section id="s4">
+            <img src="zolw.jpg" alt="Żółw w wodzie">
+            <input type="range" min="0" max="250"><br>
+            <button onclick="changePicFour()">Zastosuj</button>
+        </section>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: 000000000000</p>
+    </footer>
+    <script>
+        function changePicOne() {
+            const img = document.querySelector('#s1 img');
+            const selected = document.querySelector('input[name="efekt"]:checked');
+
+            if (selected) {
+                if (selected.value === 'Blur') {
+                    img.style.filter = `blur(${Math.random() * 4 + 4}px)`;                }
+                if (selected.value === 'Sepia') {
+                    img.style.filter = 'sepia(100%)'
+                }
+                if (selected.value === 'Negatyw') {
+                    img.style.filter = 'invert(100%)'
+                }
+            }
+        }
+        function changePicTwo() {
+            const img = document.querySelector('#s2 img');
+            const buttonText = event.target.textContent;
+
+            if (buttonText === 'Kolorowy') {
+                img.style.filter = 'none';
+            } else {
+                img.style.filter = 'grayscale(100%)';
+            }
+            
+        }
+        function changePicThree() {
+            const img = document.querySelector('#s3 img');
+            const value = document.querySelector('#s3 input').value;
+
+            img.style.filter = `opacity(${value}%)`;
+            
+        }
+        function changePicFour() {
+            const img = document.querySelector('#s4 img');
+            const value = document.querySelector('#s4 input').value;
+
+            img.style.filter = `brightness(${value}%)`;
+            
+        }
+    </script>
+</body>
+</html>
+
+<!-- Czas od 17:58 do 18:19 + od 19:29 do 18:43 + od 21 do  -->

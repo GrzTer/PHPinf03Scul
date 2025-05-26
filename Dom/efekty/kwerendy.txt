@@ -1,0 +1,8 @@
+kw1
+SELECT imie, pensja FROM pracownicy WHERE staz < 5;
+kw2
+SELECT s.nazwa AS stanowisko, AVG(p.pensja) AS srednia_pensja FROM pracownicy p INNER JOIN stanowiska s ON p.stanowiska_id = s.id GROUP BY s.nazwa;
+kw3
+SELECT p.imie, p.nazwisko, p.pensja FROM pracownicy p WHERE p.pensja = (SELECT MAX(p2.pensja) FROM pracownicy p2);
+kw4
+UPDATE pracownicy p SET p.staz = p.staz + 1;
