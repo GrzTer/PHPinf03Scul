@@ -1,0 +1,8 @@
+kw1:
+SELECT imie, miot FROM swinki WHERE data_ur LIKE "____-07-__";
+k2:
+SELECT DISTINCT s.data_ur, s.miot, r.rasa FROM swinki s JOIN rasy r ON s.rasy_id = r.id WHERE s.rasy_id = 1;
+k3:
+SELECT imie, cena, opis FROM swinki WHERE swinki.rasy_id = 1;
+k4:
+SELECT rasy.rasa FROM rasy;

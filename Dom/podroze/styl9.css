@@ -1,0 +1,78 @@
+* {
+    font-family: Georgia;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #BA6B6C;
+    color: white;
+    padding: 7px;
+    clear: both;
+}
+
+main {
+    display: flexbox;
+}
+
+#lewy, #prawy {
+    background-color: #EF9A9A;
+    width: 20%;
+    height: 500px;
+}
+
+#lewy{
+    float: left;
+}
+
+#prawy{
+    float: right;
+}
+
+#srodkowy {
+    background-color: MistyRose;
+    width: 60%;
+    height: 500px;
+    float: left;
+}
+
+#dane {
+    background-color: MistyRose;
+    padding: 50px;    
+    clear: both;
+    
+}
+
+#dane h3 {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+li {
+    text-align: left;
+}
+
+h2::first-letter {
+    font-size: 170%;
+    color: Maroon;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border: solid 1px Maroon;
+}
+
+img {
+    height: 120px;
+    margin: 7px;
+    box-shadow: 7px 7px 7px DimGray;
+}

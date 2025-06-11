@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komputery</title>
+    <link rel="stylesheet" href="styl.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <header><img src="animacja.gif" alt="Pogotowie komputerowe" /></header>
+      <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <section id="glowny1"></section>
+      <section id="glowny2">
+        <h2>Kontakt</h2>
+        <form id="formularzKontaktowy" onsubmit="return wyslijDane(event)">
+          <table>
+            <tr>
+              <td>Imię:</td>
+              <td><input type="text" id="imie" required /></td>
+            </tr>
+            <tr>
+              <td>Nazwisko:</td>
+              <td><input type="text" id="nazwisko" required /></td>
+            </tr>
+            <tr>
+              <td>E-mail:</td>
+              <td><input type="email" id="email" required /></td>
+            </tr>
+            <tr>
+              <td>Zgłoszenie:</td>
+              <td>
+                <select id="uslugi" required>
+                  <option value="naprawa komputerów">naprawa komputerów</option>
+                  <option value="odzyskiwanie danych">
+                    odzyskiwanie danych
+                  </option>
+                  <option value="wirusy">wirusy</option>
+                  <option value="konfiguracja LAN">konfiguracja LAN</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <label for="wyslij">Wyślij kopię wiadomości</label>
+                <input type="checkbox" name="wyslij" id="wyslij" checked />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button type="reset">Czyść</button>
+                <button type="submit">Wyślij</button>
+              </td>
+            </tr>
+          </table>
+          <hr />
+          <div id="wynik"></div>
+        </form>
+      </section>
+      <section id="glowny3"></section>
+      <footer>Autor: <i>00000000000</i></footer>
+    </main>
+    <script>
+      function wyslijDane(event) {
+        event.preventDefault();
+
+        const imie = document.getElementById("imie").value.trim();
+        const nazwisko = document.getElementById("nazwisko").value.trim();
+        const email = document
+          .getElementById("email")
+          .value.trim()
+          .toLowerCase();
+        const usluga = document.getElementById("uslugi").value;
+
+        const wynikDiv = document.getElementById("wynik");
+        wynikDiv.innerHTML = "";
+
+        const p1 = document.createElement("p");
+        p1.textContent = imie + " " + nazwisko;
+
+        const p2 = document.createElement("p");
+        p2.textContent = email;
+
+        const p3 = document.createElement("p");
+        p3.textContent = "Usługa: " + usluga;
+
+        wynikDiv.appendChild(p1);
+        wynikDiv.appendChild(p2);
+        wynikDiv.appendChild(p3);
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

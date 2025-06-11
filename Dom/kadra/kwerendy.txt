@@ -1,0 +1,8 @@
+kw1:
+SELECT p.pensja, COUNT(*) AS "liczba osób" FROM pracownicy p GROUP BY p.pensja ORDER BY p.pensja DESC;
+kw2:
+SELECT p.imie, p.nazwisko, s.nazwa FROM pracownicy p JOIN stanowiska s ON p.stanowiska_id = s.id WHERE p.staz > 10;
+kw3:
+SELECT p.nazwisko, p.pensja FROM pracownicy p WHERE p.staz BETWEEN 10 AND 20;
+kw4:
+ALTER TABLE stanowiska ADD minPensja INT;

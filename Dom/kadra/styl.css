@@ -1,0 +1,77 @@
+* {
+    font-family: "Bookman Old Style", serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: darkcyan;
+    color: white;
+    width: 50%;
+    height: 100px;
+    letter-spacing: 15px;
+    line-height: 100px;
+}
+
+#lewy, #prawy {
+    float: left;
+}
+
+footer {
+    background-color: darkcyan;
+    color: white;
+    margin: 0;
+}
+
+article {
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    clear: both;
+}
+
+article img {
+    width: 100%;
+}
+
+p, h2, h3 {
+    margin: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h5 {
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h5:hover {
+    background-color: lightseagreen;
+}
+
+blockquote {
+    text-align: center;
+    padding: 30px 0;
+    font-style: italic;
+}
+
+.cytat-kontener {
+    display: none;
+}
+
+.cytat-kontener:first-child {
+    display: block;
+}

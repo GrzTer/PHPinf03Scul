@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Zwiedzamy Polskę</h1>
+    </header>
+
+    <div class="container">
+      <div id="lewy">
+        <button onclick="poprzednie()">&lt;</button>
+      </div>
+      <div id="srodkowy">
+        <img src="1.jpg" alt="Aktywne zdjęcie" />
+      </div>
+      <div id="prawy">
+        <button onclick="kolejne()">&gt;</button>
+      </div>
+    </div>
+
+    <div id="miniatury">
+      <img src="1.jpg" alt="Gdańsk" />
+      <img src="2.jpg" alt="Kraków" />
+      <img src="3.jpg" alt="Niedzica" />
+      <img src="4.jpg" alt="Pieniny" />
+      <img src="5.jpg" alt="Szklarska Poręba" />
+      <img src="6.jpg" alt="Tatry" />
+      <img src="7.jpg" alt="Wrocław" />
+    </div>
+
+    <footer>
+      <h3>Autorem galerii jest:</h3>
+      <p>00000000000</p>
+      <a target="_blank" href="http://pixabay.com" rel="noopener noreferrer"
+        >Więcej zdjęć</a
+      >
+    </footer>
+
+    <script>
+      let zdjecieIndex = 1;
+      const zdjecia = 7;
+
+      function aktualizacja() {
+        const zdjecieElement = document.querySelector("#srodkowy img");
+        zdjecieElement.src = zdjecieIndex + ".jpg";
+      }
+
+      function kolejne() {
+        zdjecieIndex++;
+        if (zdjecieIndex > zdjecia) zdjecieIndex = 1;
+        aktualizacja();
+      }
+
+      function poprzednie() {
+        zdjecieIndex--;
+        if (zdjecieIndex < 1) zdjecieIndex = zdjecia;
+        aktualizacja();
+      }
+    </script>
+  </body>
+</html>
